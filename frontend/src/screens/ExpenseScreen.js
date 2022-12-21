@@ -63,23 +63,23 @@ const ExpenseScreen = () => {
     // );
   }
 
-  useEffect(() => {
-    if (!userInfo) {
-      navigate("/login");
-    }
-    // Paystack
-    // const setPayStack = async () => {
-    //   const { data: publicKey } = await axios.get("/api/config/paystack");
-    //   setEmail(expense.user.email);
-    //   setName(expense.user.name);
-    //   setAmount(expense.totalPrice * 100);
-    //   setPayStackPublicKey(publicKey);
-    // };
+  // useEffect(() => {
+  //   if (!userInfo) {
+  //     navigate("/login");
+  //   }
+  // Paystack
+  // const setPayStack = async () => {
+  //   const { data: publicKey } = await axios.get("/api/config/paystack");
+  //   setEmail(expense.user.email);
+  //   setName(expense.user.name);
+  //   setAmount(expense.totalPrice * 100);
+  //   setPayStackPublicKey(publicKey);
+  // };
 
-    // if (expense) {
-    //   setPayStack();
-    // }
-  }, [expense, userInfo, navigate]);
+  // if (expense) {
+  //   setPayStack();
+  //   // }
+  // }, [expense, userInfo, navigate]);
 
   const successPaymentHandler = (paymentResult) => {
     paymentResult.paypal = "paypal";
