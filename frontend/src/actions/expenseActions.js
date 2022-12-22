@@ -266,18 +266,7 @@ export const listExpenses = () => async (dispatch, getState) => {
       type: ORDER_LIST_REQUEST,
     });
 
-    const {
-      userLogin: { userInfo },
-    } = getState();
-
-    const config = {
-      headers: {
-        Authorization: `Bearer ${userInfo.token}`,
-      },
-    };
-
-    const { data } = await axios.get(`/api/expenses`, config);
-    console.log(data.expense);
+    const { data } = await axios.get(`/api/expenses`);
 
     dispatch({
       type: ORDER_LIST_SUCCESS,

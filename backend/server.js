@@ -41,7 +41,7 @@ app.get("/api/config/:gateway", (req, res) => {
 const __dirname = path.resolve();
 
 // Deployment configuration
-if (process.env.NODE_ENV === "photocardion") {
+if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "frontend/build")));
 
   app.get("*", (req, res) =>

@@ -16,8 +16,6 @@ const LoginScreen = () => {
   const location = useLocation();
   const navigate = useNavigate();
 
-  console.log("Location: ", location);
-
   const userLogin = useSelector((state) => state.userLogin);
   const { loading, error, userInfo } = userLogin;
 
