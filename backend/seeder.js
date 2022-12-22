@@ -7,6 +7,7 @@ import User from "./models/userModel.js";
 import Photocard from "./models/photocardModel.js";
 import connectDB from "./config/db.js";
 
+// to create a diff
 dotenv.config();
 
 connectDB();
